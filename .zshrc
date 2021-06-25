@@ -28,11 +28,12 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+# COMMANDS
+
 # __/ Aliases
 alias ls="ls -G"
 
-# ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-# SHOPIFY
-
-# __/ Dev
+# __/ Shopify
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
