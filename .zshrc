@@ -23,6 +23,11 @@ function git_branch() {
 setopt prompt_subst
 PROMPT="%F{cyan}%n%F{white}@%F{green}%m %F{yellow}%~%F{207}\$(git_branch) %f%b$ "
 
+# __/ Powerlevel10k
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # __/ Aliases
 alias ls="ls -G"
 
