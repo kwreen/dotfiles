@@ -40,4 +40,4 @@ alias ls="ls -G"
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 alias server-up="bundle install && ./bin/rails db:migrate"
 alias server-attach="tmux attach-session -t server"
-alias server-start="./spin/bin/server"
+alias server-start=".spin/bin/server"
