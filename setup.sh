@@ -1,16 +1,11 @@
-# Install Powerlevel10k
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+#!/usr/bin/env bash
+set -euo pipefail
 
-# Link dotfiles
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-# ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+repo_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
-# Run for Spin workspaces
-# if [ $SPIN ]; then
-#   # Run for shopify/shopify workspaces
-#   if [ $SPIN_REPO_SOURCE_PATH = "/src/github.com/shopify/shopify" ]; then
-#     cartridge insert kwreen/post-fulfillment-bootstrap
-#     cartridge insert kwreen/channel-source-indicator
-#     . /cartridges/post-fulfillment-bootstrap/setup.sh
-#   fi
-# fi
+ln -sfn "$repo_dir/.bashrc" "$HOME/.bashrc"
+ln -sfn "$repo_dir/.zshrc" "$HOME/.zshrc"
+mkdir -p "$HOME/.config"
+ln -sfn "$repo_dir/.config/starship.toml" "$HOME/.config/starship.toml"
+
+printf 'Linked Bash, Zsh, and Starship configuration from %s\n' "$repo_dir"
