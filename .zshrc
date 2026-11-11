@@ -34,7 +34,6 @@ alias ls="ls --color=auto"
 # __/ Shopify
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 alias server-up="bundle install && ./bin/rails db:migrate"
-alias server-start=".spin/bin/server"
 alias server-attach="tmux attach-session -t server"
 alias server-logs="tail -f log/development.log"
 alias code-typecheck="bin/srb typecheck -a"
